@@ -14,9 +14,44 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Income.init({
-    month: DataTypes.STRING,
-    year: DataTypes.INTEGER,
-    income: DataTypes.INTEGER
+    month: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'month required'
+        },
+        notNull: {
+          msg: 'month cannot be null'
+        },
+      }, 
+    },
+    year: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        
+        notEmpty: {
+          msg: 'year is required'
+        },
+        notNull: {
+          msg: 'year cannot be null'
+        }
+      }
+    },
+    income: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        
+        notEmpty: {
+          msg: 'income is required'
+        },
+        notNull: {
+          msg: 'income cannot be null'
+        }
+      }
+    },
   }, {
     sequelize,
     modelName: 'Income',
