@@ -1,8 +1,13 @@
-const express = require('express')
-const router = express.Router()
+const express = require("express");
+const router = express.Router();
+const { authentication } = require("../middlewares/authentication");
 
-const income = require('./income')
+const auth = require("./auth");
+const income = require("./income");
 
-router.use('/income', income);
+router.use("/", auth);
+router.use(authentication);
 
-module.exports = router
+router.use("/income", income);
+
+module.exports = router;
