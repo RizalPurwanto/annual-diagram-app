@@ -72,10 +72,8 @@ export default {
         email: this.email,
         password: this.password,
       };
-      console.log("INI BODY LOGIN", body);
-      this.$store.dispatch("doLogin", body).then((res) => {
-        console.log(res, "INI RES");
-      });
+
+      this.$store.dispatch("doLogin", body);
     },
   },
 };

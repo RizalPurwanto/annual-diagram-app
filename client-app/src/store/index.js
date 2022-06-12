@@ -11,7 +11,12 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     isLogin: localStorage.access_token ? true : false,
-    income: [],
+    income: [
+      {
+        month: "January",
+        income: 3000000,
+      },
+    ],
   },
 
   mutations: {
@@ -34,12 +39,10 @@ export default new Vuex.Store({
     async fetchIncome(context) {
       let url = `${LOCAL_URL}/income`;
       const headers = { access_token: localStorage.getItem("access_token") };
-      axios
+      return axios
         .get(url, { headers })
         .then((response) => {
           context.commit("SET_INCOME", response.data);
-          console.log(this.state.income, "INI INCOME API CALL");
-          // router.push('/').catch(()=>{});
         })
         .catch((err) => {
           Swal.fire(err.response.data.message);
