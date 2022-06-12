@@ -34,4 +34,19 @@ const router = new VueRouter({
   routes,
 });
 
+router.beforeEach((to, from, next) => {
+  console.log(from, to, "INI DARI ROUTER NAVGARD");
+
+  if (to.name !== "login" && !localStorage.access_token) {
+    console.log("-----2");
+    next("/login");
+  } else if (to.name == "login" && localStorage.access_token) {
+    console.log("-----1");
+    next("/");
+  } else {
+    console.log("-----3");
+    next();
+  }
+});
+
 export default router;
