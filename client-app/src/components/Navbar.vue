@@ -23,6 +23,7 @@
   </nav>
 </template>
 <script>
+import Swal from "sweetalert2";
 export default {
   name: "NavBar",
   methods: {
@@ -31,6 +32,7 @@ export default {
       localStorage.clear();
 
       this.$router.push("/login");
+      Swal.fire("You have logged out");
     },
   },
 };
