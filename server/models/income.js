@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Income extends Model {
     /**
@@ -13,48 +11,38 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Income.init({
-    month: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notEmpty: {
-          msg: 'month required'
+  Income.init(
+    {
+      month: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          notEmpty: {
+            msg: "month required",
+          },
+          notNull: {
+            msg: "month cannot be null",
+          },
         },
-        notNull: {
-          msg: 'month cannot be null'
+      },
+
+      income: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          notEmpty: {
+            msg: "income is required",
+          },
+          notNull: {
+            msg: "income cannot be null",
+          },
         },
-      }, 
+      },
     },
-    year: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        
-        notEmpty: {
-          msg: 'year is required'
-        },
-        notNull: {
-          msg: 'year cannot be null'
-        }
-      }
-    },
-    income: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        
-        notEmpty: {
-          msg: 'income is required'
-        },
-        notNull: {
-          msg: 'income cannot be null'
-        }
-      }
-    },
-  }, {
-    sequelize,
-    modelName: 'Income',
-  });
+    {
+      sequelize,
+      modelName: "Income",
+    }
+  );
   return Income;
 };

@@ -1,62 +1,62 @@
 [
-    {
-        "month" : "January",
-        "year" : 2021,
-        "income" : 3200000
-    },
-    {
-        "month" : "February",
-        "year" : 2021,
-        "income" : 3000000
-    },
-    {
-        "month" : "March",
-        "year" : 2021,
-        "income" : 2200000
-    },
-    {
-        "month" : "April",
-        "year" : 2021,
-        "income" : 4000000
-    },
-    {
-        "month" : "May",
-        "year" : 2021,
-        "income" : 2500000
-    },
-    {
-        "month" : "June",
-        "year" : 2021,
-        "income" : 3000000
-    },
-    {
-        "month" : "July",
-        "year" : 2021,
-        "income" : 3500000
-    },
-    {
-        "month" : "August",
-        "year" : 2021,
-        "income" : 3600000
-    },
-    {
-        "month" : "September",
-        "year" : 2021,
-        "income" : 3200000
-    },
-    {
-        "month" : "October",
-        "year" : 2021,
-        "income" : 3000000
-    },
-    {
-        "month" : "November",
-        "year" : 2021,
-        "income" : 4000000
-    },
-        {
-        "month" : "December",
-        "year" : 2021,
-        "income" : 3500000
-    }
+  {
+    "month": "January 2021",
+
+    "income": 3200000
+  },
+  {
+    "month": "February 2021",
+
+    "income": 3000000
+  },
+  {
+    "month": "March 2021",
+
+    "income": 2200000
+  },
+  {
+    "month": "April 2021",
+
+    "income": 4000000
+  },
+  {
+    "month": "May 2021",
+
+    "income": 2500000
+  },
+  {
+    "month": "June 2021",
+
+    "income": 3000000
+  },
+  {
+    "month": "July 2021",
+
+    "income": 3500000
+  },
+  {
+    "month": "August 2021",
+
+    "income": 3600000
+  },
+  {
+    "month": "September 2021",
+
+    "income": 3200000
+  },
+  {
+    "month": "October 2021",
+
+    "income": 3000000
+  },
+  {
+    "month": "November 2021",
+
+    "income": 4000000
+  },
+  {
+    "month": "December 2021",
+
+    "income": 3500000
+  }
 ]
