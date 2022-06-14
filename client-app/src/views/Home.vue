@@ -1,16 +1,24 @@
 <template>
   <div>
-    <div class="shadow-lg rounded-lg overflow-hidden">
-      <div class="py-3 px-5 bg-gray-50 font-bold">Annual Income 2021</div>
-      <canvas class="p-10" id="income"></canvas>
+    <div class="shadow-lg flex flex-col justify-center overflow-hidden">
+      <div
+        class="py-3 rounded-full px-5 bg-gray-200 w-1/3 my-5 font-bold m-auto"
+      >
+        Annual Income 2021
+      </div>
+      <div class="w-3/4 m-auto mb-10">
+        <diagram-bar></diagram-bar>
+      </div>
     </div>
   </div>
 </template>
 <script>
 import Chart from "chart.js";
+import DiagramBar from "../components/DiagramBar.vue";
 
 //let incomeData = {};
 export default {
+  components: { DiagramBar },
   name: "HomePage",
   data() {
     return {
@@ -41,7 +49,7 @@ export default {
               data: this.$store.state.income.map((el) => {
                 return el.income;
               }),
-              backgroundColor: "rgba(54,73,93,.5)",
+              backgroundColor: "rgba(51,51,255,.5)",
               borderColor: "#36495d",
               borderWidth: 3,
             },
