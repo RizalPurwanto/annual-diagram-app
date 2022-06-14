@@ -8,6 +8,8 @@ npm install
 ```
 
 ### Database Setup 
+This project uses PostgreSQL for the database system
+
 - Create the Database
 ```
 npx sequelize db:create
