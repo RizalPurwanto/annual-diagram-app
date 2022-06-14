@@ -44,7 +44,7 @@ export default {
               data: this.$store.state.income.map((el) => {
                 return el.income;
               }),
-              backgroundColor: "rgba(54,73,93,.5)",
+              backgroundColor: "rgba(51,51,255,.5)",
               borderColor: "#36495d",
               borderWidth: 3,
             },

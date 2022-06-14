@@ -1,5 +1,5 @@
 <template>
-  <canvas class="p-10" id="income"></canvas>
+  <canvas class="" id="income"></canvas>
 </template>
 <script>
 export default {
