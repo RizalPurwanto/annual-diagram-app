@@ -1,9 +1,15 @@
 <template>
   <div>
     <div class="shadow-lg rounded-lg overflow-hidden">
-      <div class="py-3 px-5 bg-gray-50 font-bold">Annual Income 2021</div>
+      <div
+        class="py-2 px-5 bg-gray-200 rounded-full w-1/3 mt-2 font-bold mx-auto"
+      >
+        Annual Income 2021
+      </div>
 
-      <diagram-bar></diagram-bar>
+      <div class="w-full px-10 mb-10 m-auto">
+        <diagram-bar></diagram-bar>
+      </div>
     </div>
   </div>
 </template>
